@@ -1,0 +1,17 @@
+# Java / Maven
+backend/target/
+
+# Vue / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Secrets — NEVER commit these
+.env
+.env.production
+*.env

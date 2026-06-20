@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -13,14 +14,13 @@ import java.util.function.Function;
 @Component
 public class JwtService {
 
-    // In production this comes from an environment variable — never hardcoded.
-    // For local dev, this is fine as a constant.
-    private static final String SECRET_KEY = "this-is-a-local-dev-secret-key-change-it-in-production-please-1234567890";
+    @Value("${jwt.secret-key:this-is-a-local-dev-secret-key-change-it-in-production-please-1234567890}")
+    private String secretKey;
 
     private static final long EXPIRATION_MS = 1000 * 60 * 60 * 24; // 24 hours
 
     private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+        return Keys.hmacShaKeyFor(secretKey.getBytes());
     }
 
     public String generateToken(String email) {

@@ -74,7 +74,40 @@ const year = new Date().getFullYear()
         </div>
       </div>
 
-      <div class="mt-10 border-t border-[var(--border-default)] pt-6 text-center text-xs text-[var(--text-tertiary)]">
+      <!-- Competitive programming profiles -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+        <span class="mr-1 text-[10px] font-semibold uppercase tracking-widest text-[var(--text-tertiary)]">2500+ Problems:</span>
+
+        <a href="https://codeforces.com/profile/Ellipse" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1.5 rounded-lg border border-[var(--border-default)] px-3 py-1.5 text-[var(--text-tertiary)] transition-all hover:border-blue-500/40 hover:text-blue-400"
+          aria-label="Codeforces">
+          <span class="text-[10px] font-bold">CF</span>
+          <span class="text-[10px]">Expert · max 1701</span>
+        </a>
+
+        <a href="https://www.codechef.com/users/priyansh_misra" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1.5 rounded-lg border border-[var(--border-default)] px-3 py-1.5 text-[var(--text-tertiary)] transition-all hover:border-amber-500/40 hover:text-amber-400"
+          aria-label="CodeChef">
+          <span class="text-[10px] font-bold">CC</span>
+          <span class="text-[10px]">4★ · max 1929</span>
+        </a>
+
+        <a href="https://leetcode.com/u/Kalki_2898/" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1.5 rounded-lg border border-[var(--border-default)] px-3 py-1.5 text-[var(--text-tertiary)] transition-all hover:border-orange-500/40 hover:text-orange-400"
+          aria-label="LeetCode">
+          <span class="text-[10px] font-bold">LC</span>
+          <span class="text-[10px]">Top 3.11% · max 2069</span>
+        </a>
+
+        <a href="https://atcoder.jp/users/Kalki_2898" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-1.5 rounded-lg border border-[var(--border-default)] px-3 py-1.5 text-[var(--text-tertiary)] transition-all hover:border-emerald-500/40 hover:text-emerald-400"
+          aria-label="AtCoder">
+          <span class="text-[10px] font-bold">AT</span>
+          <span class="text-[10px]">Green · max 826</span>
+        </a>
+      </div>
+
+      <div class="mt-6 border-t border-[var(--border-default)] pt-6 text-center text-xs text-[var(--text-tertiary)]">
         &copy; {{ year }} Priyanshu Mishra — All rights reserved
       </div>
     </div>

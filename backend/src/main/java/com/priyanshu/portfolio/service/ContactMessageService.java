@@ -7,6 +7,7 @@ import com.priyanshu.portfolio.exception.ResourceNotFoundException;
 import com.priyanshu.portfolio.model.ContactMessage;
 import com.priyanshu.portfolio.repository.ContactMessageRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ContactMessageService {
@@ -30,12 +32,16 @@ public class ContactMessageService {
 
         ContactMessage saved = contactMessageRepository.save(message);
 
-        emailService.sendContactNotification(
-                request.getName(),
-                request.getEmail(),
-                request.getSubject(),
-                request.getMessage()
-        );
+        try {
+            emailService.sendContactNotification(
+                    request.getName(),
+                    request.getEmail(),
+                    request.getSubject(),
+                    request.getMessage()
+            );
+        } catch (Exception e) {
+            log.error("Email notification failed (message was saved): {}", e.getMessage());
+        }
 
         return toResponse(saved);
     }

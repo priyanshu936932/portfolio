@@ -1,10 +1,12 @@
 <script setup>
 import { useTheme } from '@/composables/useTheme'
 import { useToast } from '@/composables/useToast'
+import { useKeepAlive } from '@/composables/useKeepAlive'
 import NavBar from '@/components/layout/NavBar.vue'
 import Footer from '@/components/layout/Footer.vue'
 
 useTheme()
+useKeepAlive()
 const { toasts, dismiss } = useToast()
 </script>
 

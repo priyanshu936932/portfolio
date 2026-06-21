@@ -15,7 +15,7 @@ jobs:
       - name: Wake up backend
         run: |
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            https://portfolio-backend.onrender.com/actuator/health)
+            https://portfolio-1-tv5f.onrender.com/actuator/health)
           echo "Health check status: $STATUS"
           if [ "$STATUS" != "200" ]; then
             echo "Warning: backend returned $STATUS"

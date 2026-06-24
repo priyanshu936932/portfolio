@@ -42,6 +42,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
             .requestMatchers(HttpMethod.GET, "/api/tags/**").permitAll()
             .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()
             .requestMatchers("/actuator/health").permitAll()
+            .requestMatchers("/ping").permitAll()
             .anyRequest().authenticated()
         )
         .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

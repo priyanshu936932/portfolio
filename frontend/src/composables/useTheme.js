@@ -1,6 +1,6 @@
 import { ref, watchEffect } from 'vue'
 
-const theme = ref(localStorage.getItem('theme') || 'dark')
+const theme = ref(localStorage.getItem('theme') || 'light')
 
 export function useTheme() {
   watchEffect(() => {

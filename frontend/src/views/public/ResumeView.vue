@@ -2,14 +2,16 @@
 import { ref, onMounted } from 'vue'
 import { profileApi } from '@/api/profile'
 
-const resumeUrl = ref(null)
+const DEFAULT_RESUME = 'https://drive.google.com/file/d/1baHQtbwvVp4u6241uKMvfqzudCCW5Qqo/view?usp=sharing'
+
+const resumeUrl = ref(DEFAULT_RESUME)
 const loading   = ref(true)
 
 onMounted(async () => {
   try {
     const { data } = await profileApi.get()
-    resumeUrl.value = data.resumeUrl
-  } catch { /* static resume still shows */ }
+    resumeUrl.value = data.resumeUrl || DEFAULT_RESUME
+  } catch { /* use default */ }
   finally { loading.value = false }
 })
 

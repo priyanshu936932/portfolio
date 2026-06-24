@@ -11,7 +11,7 @@ const toast  = useToast()
 
 const form = reactive({
   fullName: '', bio: '', email: '', phone: '',
-  linkedinUrl: '', githubUrl: '',
+  linkedinUrl: '', githubUrl: '', resumeUrl: '',
 })
 
 const saving = reactive({ state: false })
@@ -27,6 +27,7 @@ watch(() => store.data, (val) => {
     phone:       val.phone       ?? '',
     linkedinUrl: val.linkedinUrl ?? '',
     githubUrl:   val.githubUrl   ?? '',
+    resumeUrl:   val.resumeUrl   ?? '',
   })
 }, { immediate: true })
 
@@ -73,6 +74,14 @@ async function submit() {
         <h2 class="font-display font-semibold text-[var(--text-primary)]">Social Links</h2>
         <BaseInput v-model="form.githubUrl" label="GitHub URL" placeholder="https://github.com/username" />
         <BaseInput v-model="form.linkedinUrl" label="LinkedIn URL" placeholder="https://linkedin.com/in/username" />
+      </div>
+
+      <div class="rounded-2xl border border-[var(--border-default)] bg-[var(--bg-surface)] p-6 space-y-5">
+        <div>
+          <h2 class="font-display font-semibold text-[var(--text-primary)]">Resume</h2>
+          <p class="mt-0.5 text-xs text-[var(--text-tertiary)]">Paste your public Google Drive or any direct download link. Visitors will see a Download button on the Resume page.</p>
+        </div>
+        <BaseInput v-model="form.resumeUrl" label="Resume URL" placeholder="https://drive.google.com/file/d/…/view?usp=sharing" />
       </div>
 
       <div class="flex justify-end">

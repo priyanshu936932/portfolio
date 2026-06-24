@@ -12,4 +12,5 @@ public class ProfileResponse {
     private String linkedinUrl;
     private String githubUrl;
     private String bio;
+    private String resumeUrl;
 }

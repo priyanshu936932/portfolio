@@ -34,6 +34,8 @@ public class Profile {
     @Column(columnDefinition = "TEXT")
     private String bio;
 
+    private String resumeUrl;
+
     @Column(nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
 }

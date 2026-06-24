@@ -12,6 +12,8 @@ const router = createRouter({
     { path: '/projects/:slug',name: 'project-detail', meta: { title: 'Project — ' + SITE },        component: () => import('@/views/public/ProjectDetailView.vue') },
     { path: '/blog',          name: 'blog',           meta: { title: 'Blog — ' + SITE },           component: () => import('@/views/public/BlogView.vue') },
     { path: '/blog/:slug',    name: 'blog-post',      meta: { title: 'Post — ' + SITE },           component: () => import('@/views/public/BlogPostView.vue') },
+    { path: '/cp',            name: 'cp',             meta: { title: 'Competitive Programming — ' + SITE }, component: () => import('@/views/public/CpView.vue') },
+    { path: '/resume',        name: 'resume',         meta: { title: 'Resume — ' + SITE },         component: () => import('@/views/public/ResumeView.vue') },
     { path: '/contact',       name: 'contact',        meta: { title: 'Contact — ' + SITE },        component: () => import('@/views/public/ContactView.vue') },
     { path: '/admin/login',   name: 'login',          meta: { title: 'Sign in — ' + SITE },        component: () => import('@/views/admin/LoginView.vue') },
     {

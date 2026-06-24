@@ -17,4 +17,5 @@ public class ProfileRequest {
     private String linkedinUrl;
     private String githubUrl;
     private String bio;
+    private String resumeUrl;
 }

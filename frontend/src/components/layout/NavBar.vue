@@ -9,9 +9,11 @@ const router = useRouter()
 const mobileOpen = ref(false)
 
 const navLinks = [
-  { to: '/', label: 'Home', exact: true },
-  { to: '/projects', label: 'Projects' },
-  { to: '/blog', label: 'Blog' },
+  { to: '/',        label: 'Home',    exact: true },
+  { to: '/projects',label: 'Projects' },
+  { to: '/cp',      label: 'CP' },
+  { to: '/blog',    label: 'Blog' },
+  { to: '/resume',  label: 'Resume' },
   { to: '/contact', label: 'Contact' },
 ]
 

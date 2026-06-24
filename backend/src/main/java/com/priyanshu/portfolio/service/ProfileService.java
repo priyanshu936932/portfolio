@@ -34,6 +34,7 @@ public class ProfileService {
         profile.setLinkedinUrl(request.getLinkedinUrl());
         profile.setGithubUrl(request.getGithubUrl());
         profile.setBio(request.getBio());
+        profile.setResumeUrl(request.getResumeUrl());
         profile.setUpdatedAt(LocalDateTime.now());
 
         Profile updated = profileRepository.save(profile);
@@ -47,7 +48,8 @@ public class ProfileService {
                 profile.getPhone(),
                 profile.getLinkedinUrl(),
                 profile.getGithubUrl(),
-                profile.getBio()
+                profile.getBio(),
+                profile.getResumeUrl()
         );
     }
 }

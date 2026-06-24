@@ -148,7 +148,7 @@ const skills = [
               <p class="mt-1 text-xs text-[var(--text-tertiary)]">Relevant coursework: DBMS, OOP, Operating Systems, Computer Networks, DSA</p>
             </div>
             <div class="shrink-0 text-right">
-              <p class="text-sm font-semibold text-[var(--color-brand-400)]">CGPA: 8.21</p>
+              <p class="text-sm font-semibold text-[var(--color-brand-400)]">CGPA: 8.35</p>
               <p class="text-xs text-[var(--text-tertiary)]">Nov 2022 – May 2026</p>
             </div>
           </div>
